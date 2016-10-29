@@ -5,6 +5,45 @@
  	font-family: "Ubuntu Condensed";
  }
 
+.headings {
+	text-align: center;
+	min-height: 50vh;
+	color: #FFFFFF;
+	text-shadow: 2px 2px #000000;
+}
+
+.headings h2 {
+	font-size: 75px;
+}
+
+.headings p {
+	font-size: 30px;
+}
+
+@media (max-width: 768px) { 
+	.headings  h2 {
+		font-size: 50px;
+	}
+
+	.headings p {
+		font-size: 20px;
+	}
+}
+
+.black {
+	background: rgba(0,0,0,0.5);
+	height: 100%;
+	width: 100%;
+}
+
+.black-2 {
+	background: rgba(0,0,0,0.5);
+	min-height: 50vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
 header {
 	background: url(../img/header.jpg);
 	height: 100vh;
@@ -14,11 +53,6 @@ header {
 
 header li a {
 	color: #FFFFFF;
-}
-
-.black {
-	background:rgba(0,0,0,0.5);
-	height: 100vh;
 }
 
 .slogan {
@@ -50,22 +84,22 @@ header li a {
 	}
 }
 
-/*SHORT ABOUT*/
 
 .short-about {
 	background: #248A7B;
-	height: 400px;
+	min-height: 50vh;
 	color: #FFFFFF;
 	display: flex;
 	align-items: center;
+	text-shadow: 1px 1px #000000;
 }
 
 .short-about h2 {
-	font-size: 50px;
+	font-size: 65px;
 }
 
 .short-about p {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .short-about img {
@@ -93,24 +127,21 @@ header li a {
 	}
 }
 
-/*DOORS-1*/
-
 .doors-1 {
-	text-align: center;
-	background: #FFFFFF;
+	background: url(../img/firstsection.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
-.doors-1 h2 {
-	font-size: 50px;
-}
-
-.doors-1 p {
-	font-size: 18px;
+.doors-2 {
+	background: url(../img/secsection.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
 .doors-text {
-	padding-bottom: 25px;
-	padding-top: 10px;
+	display: flex;
+	align-items: center;
 }
 
 .picture {
@@ -136,13 +167,48 @@ header li a {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	top:0;
+	top: 0;
 }
 
 .picture:hover {
 	transform: scale(1.50);
 }
 
-.row {
+ .row {
 	overflow: hidden;
+}
+
+.bathroom {
+	background: url(../img/bathroom.jpg);
+	background-size: cover;
+	background-position: 50% 120%;
+}
+
+/*CONTACT*/
+
+.contact {
+	background: url(../img/contact.jpg);
+	background-size: cover;
+	background-position: 50% 100%;
+	display: flex;
+	align-items: center;
+}
+
+footer {
+	height: 100px;
+	font-size: 25px;
+	text-align: center;	
+	line-height: 100px;
+	background: #248A7B;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+footer a, footer a:hover {
+	color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer p {
+	margin: 0;
 }
