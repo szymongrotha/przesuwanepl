@@ -1,4 +1,5 @@
  @import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed&amp;subset=latin-ext);
+ @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=latin-ext);
 
  * {
  	box-sizing: border-box;
@@ -62,6 +63,7 @@ header li a {
 	flex-direction: column;
 	height: 83vh;
 	color: #FFFFFF;
+	font-family: Ubuntu;
 }
 
 .slogan h1 {
@@ -147,7 +149,6 @@ header li a {
 .picture {
 	padding: 0;
 	overflow: hidden;
-	transition: all 0.7s ease; 
 	color: #FFFFFF;
 	font-size: 50px;
 	cursor: pointer;
@@ -160,6 +161,7 @@ header li a {
     top:-100%;
     transition: .7s; 
     background-color: rgba(0,0,0,0.6);
+	z-index: 1;
 }
 
 .picture:hover .layer {
@@ -168,14 +170,39 @@ header li a {
 	justify-content: center;
 	align-items: center;
 	top: 0;
+	z-index: 1;
 }
 
-.picture:hover {
+.zoom {
+	transition: .7s; 
+}
+
+.zoom:hover {
 	transform: scale(1.50);
+	z-index: 2;
 }
 
- .row {
-	overflow: hidden;
+.doors-2-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.doors-mobile-2 {
+	display: none;
+}
+
+@media (max-width: 1170px) {
+	.doors-mobile {
+		display: none;
+	}
+
+	.doors-mobile-2 {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
 }
 
 .bathroom {
@@ -183,8 +210,6 @@ header li a {
 	background-size: cover;
 	background-position: 50% 120%;
 }
-
-/*CONTACT*/
 
 .contact {
 	background: url(../img/contact.jpg);
