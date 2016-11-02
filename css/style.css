@@ -1,9 +1,49 @@
  @import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed&amp;subset=latin-ext);
+ @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=latin-ext);
 
  * {
  	box-sizing: border-box;
  	font-family: "Ubuntu Condensed";
  }
+
+.headings {
+	text-align: center;
+	min-height: 50vh;
+	color: #FFFFFF;
+	text-shadow: 2px 2px #000000;
+}
+
+.headings h2 {
+	font-size: 75px;
+}
+
+.headings p {
+	font-size: 30px;
+}
+
+@media (max-width: 768px) { 
+	.headings  h2 {
+		font-size: 50px;
+	}
+
+	.headings p {
+		font-size: 20px;
+	}
+}
+
+.black {
+	background: rgba(0,0,0,0.5);
+	height: 100%;
+	width: 100%;
+}
+
+.black-2 {
+	background: rgba(0,0,0,0.5);
+	min-height: 50vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
 
 header {
 	background: url(../img/header.jpg);
@@ -16,11 +56,6 @@ header li a {
 	color: #FFFFFF;
 }
 
-.black {
-	background:rgba(0,0,0,0.5);
-	height: 100vh;
-}
-
 .slogan {
 	display: flex;
 	align-items: center;
@@ -28,6 +63,7 @@ header li a {
 	flex-direction: column;
 	height: 83vh;
 	color: #FFFFFF;
+	font-family: Ubuntu;
 }
 
 .slogan h1 {
@@ -50,22 +86,21 @@ header li a {
 	}
 }
 
-/*SHORT ABOUT*/
-
 .short-about {
 	background: #248A7B;
-	height: 400px;
+	min-height: 50vh;
 	color: #FFFFFF;
 	display: flex;
 	align-items: center;
+	text-shadow: 1px 1px #000000;
 }
 
 .short-about h2 {
-	font-size: 50px;
+	font-size: 65px;
 }
 
 .short-about p {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .short-about img {
@@ -93,30 +128,26 @@ header li a {
 	}
 }
 
-/*DOORS-1*/
-
 .doors-1 {
-	text-align: center;
-	background: #FFFFFF;
+	background: url(../img/firstsection.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
-.doors-1 h2 {
-	font-size: 50px;
-}
-
-.doors-1 p {
-	font-size: 18px;
+.doors-2 {
+	background: url(../img/secsection.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
 .doors-text {
-	padding-bottom: 25px;
-	padding-top: 10px;
+	display: flex;
+	align-items: center;
 }
 
 .picture {
 	padding: 0;
 	overflow: hidden;
-	transition: all 0.7s ease; 
 	color: #FFFFFF;
 	font-size: 50px;
 	cursor: pointer;
@@ -129,6 +160,7 @@ header li a {
     top:-100%;
     transition: .7s; 
     background-color: rgba(0,0,0,0.6);
+	z-index: 1;
 }
 
 .picture:hover .layer {
@@ -136,13 +168,71 @@ header li a {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	top:0;
+	top: 0;
+	z-index: 1;
 }
 
-.picture:hover {
+.zoom {
+	transition: .7s; 
+}
+
+.zoom:hover {
 	transform: scale(1.50);
+	z-index: 2;
 }
 
-.row {
-	overflow: hidden;
+.doors-2-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.doors-mobile-2 {
+	display: none;
+}
+
+@media (max-width: 1170px) {
+	.doors-mobile {
+		display: none;
+	}
+
+	.doors-mobile-2 {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.bathroom {
+	background: url(../img/bathroom.jpg);
+	background-size: cover;
+	background-position: 50% 120%;
+}
+
+.contact {
+	background: url(../img/contact.jpg);
+	background-size: cover;
+	background-position: 50% 100%;
+	display: flex;
+	align-items: center;
+}
+
+footer {
+	height: 100px;
+	font-size: 25px;
+	text-align: center;	
+	line-height: 100px;
+	background: #248A7B;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+footer a, footer a:hover {
+	color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer p {
+	margin: 0;
 }
